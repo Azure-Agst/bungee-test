@@ -1,0 +1,81 @@
+# BungeeCord config.yml
+# Annotations added by Azure-Agst
+# Last updated: 04/27/2020
+
+# NOTE: Bungeecord deletes all comments on server start, so keep a copy
+# of this handy and copy it into config.yml on config change.
+
+# NOTE: See the config guide for more details.
+# https://www.spigotmc.org/wiki/bungeecord-configuration-guide/
+
+# =====================================================================
+
+# Player Limit - The actual amount of players that can join bungeecord
+player_limit: 20
+
+# Listeners - A list of connections that bungeecord listens on.
+listeners:
+- query_port: 25565
+  motd: '&1Azure''s big minecraft server'
+  tab_list: GLOBAL_PING
+  query_enabled: false
+  proxy_protocol: false
+  ping_passthrough: false
+  priorities:
+  - server_one
+  bind_local_address: true
+  host: 0.0.0.0:25565
+  max_players: 20
+  tab_size: 40
+  force_default_server: false
+  #forced_hosts:
+  #  pvp.md-5.net: pvp
+
+# Servers - A list of child servers BungeeCord can redirect players to
+# NOTE: setting "restricted" prevents players from joining unless 
+# they have the "bungeecord.server.[servername]" permission.
+servers:
+  server_one:
+    motd: '&1BungeeCord - Server1'
+    address: localhost:25566
+    restricted: false
+  server_two:
+    motd: '&1BungeeCord - Server2'
+    address: localhost:25567
+    restricted: false
+
+# Permissions - A list of groups who recieve bungeecord permissions across all child servers
+permissions:
+  default:
+  - bungeecord.command.server
+  - bungeecord.command.list
+  admin:
+  - bungeecord.command.alert
+  - bungeecord.command.end
+  - bungeecord.command.ip
+  - bungeecord.command.reload
+
+# Groups - Where you assign players to certain permission groups
+groups:
+  Azure_Agst:
+  - admin
+
+# Disabled commands - A list of commands you want disabled across all child servers for all players
+disabled_commands:
+- disabledcommandhere
+
+# Other goodies - Every other setting
+prevent_proxy_connections: false
+remote_ping_cache: -1
+network_compression_threshold: 256
+log_pings: true
+connection_throttle_limit: 3
+server_connect_timeout: 5000
+timeout: 30000
+ip_forward: false
+remote_ping_timeout: 5000
+connection_throttle: 4000
+log_commands: false
+stats: 2036de54-8f86-4a73-a700-64ceb69417bb
+online_mode: true
+forge_support: false

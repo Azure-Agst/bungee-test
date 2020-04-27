@@ -1,0 +1,18 @@
+# Minecraft server things
+cache/
+logs/
+usercache.json
+version_history.json
+whitelist.json
+banned-ips.json
+banned-players.json
+help.yml
+ops.json
+bukkit.yml
+commands.yml
+paper.yml
+permissions.yml
+spigot.yml
+
+# Bungeecord things
+proxy.log.*

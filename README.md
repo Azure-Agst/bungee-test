@@ -16,7 +16,7 @@ cd bungee-test
 git lfs fetch --all
 ```
 
-*Note: Since all .jar files in the project are hosted using git-lfs, simply downloading the zip archive of the repository will not suffice. You'll need to download git/git-lfs and run these commands to obtain valid copies all files in thie repo.*
+*NOTE: if you don't want to install git, you may download an archive of the project [here](https://github.com/Azure-Agst/bungee-test/archive/master.zip), extract that to somewhere on your computer, and use that instead.*
 
 ### 1.) Setting up Servers
 
